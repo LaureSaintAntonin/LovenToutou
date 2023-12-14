@@ -5,7 +5,7 @@ def index(request):
 	return HttpResponse("Bienvenue sur LovenToutou")
 
 
-def user():
+def user_connexion():
 	return HttpResponse("Connectez-vous")
 
 
