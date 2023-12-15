@@ -4,24 +4,26 @@ pour lancer le venv :
 
 pour lancer le serveur
     taper python manage.py runserver
-    dans le terminal, depuis le dossier qui contient le fichier manage.py, src.
+    dans le terminal, depuis le dossier qui contient le fichier manage.py, src/mysite
 
 
 Projets vs. applications
 
     Quelle est la différence entre un projet et une application ? 
-    Une application est une application Web qui fait quelque chose – par exemple un système de blog, 
-    une base de données publique ou une petite application de sondage. 
-        pour créer une application 'py manage.py startapp LovenToutou' (sans les '')
 
-    Un projet est un ensemble de réglages et d’applications pour un site Web particulier. 
-    Un projet peut contenir plusieurs applications. 
-    Une application peut apparaître dans plusieurs projets.
+        Un projet est un ensemble de réglages et d’applications pour un site Web particulier. 
+        Un projet peut contenir plusieurs applications. 
+        Une application peut apparaître dans plusieurs projets.
         pour créer un projet 'django-admin startproject mysite' (sans les '')
 
+        Une application est une application Web qui fait quelque chose – par exemple un système de blog, 
+        une base de données publique ou une petite application de sondage. 
+        pour créer une application 'py manage.py startapp loventoutou' (sans les '')
+
+
+
 Dans mon arborescence : 
-    src -> dossier source
-        mysite -> mon projet, mes réglages.
-        LovenToutou -> mon application.
-        
-    
+    src/mysite -> dossier source
+            mysite -> mon projet, mes réglages.
+            loventoutou -> mon application.
+
