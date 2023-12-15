@@ -27,3 +27,14 @@ Dans mon arborescence :
             mysite -> mon projet, mes réglages.
             loventoutou -> mon application.
 
+
+
+Le serveur met un message derreur 
+(...File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'user') 
+lorsque je rajoute une urlpattern (path("", views.user, name="user")) 
+au fichier loventoutou/urls.py 
+--> trouver une autre façon de rajouter des urls pour mes autres pages 
+    =>(user_connexion, profil, navigation) - voir fichier txt pensebete.
