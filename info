@@ -1,41 +1,45 @@
-pour lancer le venv : 
-    taper  L:\SideProject\LovenToutou\.venv\Scripts\Activate.ps1 
-    dans le terminal, depuis le dossier qui contient le dossier .venv L:\SideProject\LovenToutou>
+pour lancer le venv :
+taper L:\SideProject\LovenToutou\.venv\Scripts\Activate.ps1
+dans le terminal, depuis le dossier qui contient le dossier .venv L:\SideProject\LovenToutou>
 
 pour lancer le serveur
-    taper python manage.py runserver
-    dans le terminal, depuis le dossier qui contient le fichier manage.py, src/mysite
+taper python manage.py runserver
+dans le terminal, depuis le dossier qui contient le fichier manage.py, src/mysite
 
-
-Projets vs. 
+Projets vs.
 applications
 
-    Quelle est la différence entre un projet et une application ? 
+    Quelle est la différence entre un projet et une application ?
 
-        Un projet est un ensemble de réglages et d’applications pour un site Web particulier. 
-        Un projet peut contenir plusieurs applications. 
+        Un projet est un ensemble de réglages et d’applications pour un site Web particulier.
+        Un projet peut contenir plusieurs applications.
         Une application peut apparaître dans plusieurs projets.
         pour créer un projet 'django-admin startproject mysite' (sans les '')
 
-        Une application est une application Web qui fait quelque chose – par exemple un système de blog, 
-        une base de données publique ou une petite application de sondage. 
+        Une application est une application Web qui fait quelque chose – par exemple un système de blog,
+        une base de données publique ou une petite application de sondage.
         pour créer une application 'py manage.py startapp loventoutou' (sans les '')
 
+        Les applications de Django sont comme des pièces d’un jeu de construction :
+        vous pouvez utiliser une application dans plusieurs projets, et vous pouvez distribuer les applications, parce qu’elles n’ont pas besoin d’être liées à une installation Django particulière.
 
+Dans mon arborescence :
+src/mysite -> dossier source
+mysite -> mon projet, mes réglages.
+loventoutou -> mon application.
 
-Dans mon arborescence : 
-    src/mysite -> dossier source
-            mysite -> mon projet, mes réglages.
-            loventoutou -> mon application.
+Le serveur met un message derreur
+(...File "<frozen importlib._bootstrap>", line 1387, in \_gcd_import
+File "<frozen importlib._bootstrap>", line 1360, in \_find_and_load
+File "<frozen importlib._bootstrap>", line 1324, in \_find_and_load_unlocked
+ModuleNotFoundError: No module named 'user')
 
+lorsque je rajoute une urlpattern (path("", views.user, name="user"))
+au fichier loventoutou/urls.py
+--> trouver une autre façon de rajouter des urls pour mes autres pages
+=>(user_connexion, profil, navigation) - voir fichier .txt pensebete.
 
-
-Le serveur met un message derreur 
-(...File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'user') 
-lorsque je rajoute une urlpattern (path("", views.user, name="user")) 
-au fichier loventoutou/urls.py 
---> trouver une autre façon de rajouter des urls pour mes autres pages 
-    =>(user_connexion, profil, navigation) - voir fichier txt pensebete.
+BDD
+* Modifiez les modèles (dans models.py).
+* Exécutez 'python manage.py makemigrations' pour créer des migrations correspondant à ces changements.
+* Exécutez 'python manage.py migrate' pour appliquer ces modifications à la base de données.
