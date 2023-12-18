@@ -5,4 +5,7 @@ from . import views
 # dont deux sont obligatoires : route et view, et deux facultatifs : kwargs et name.
 urlpatterns = [
 	path("", views.index, name="index"),
+	path("", views.connexion, name="connexion"),
+	path("", views.user, name="user"),
+	path("", views.navigation, name="navigation"),
 ]

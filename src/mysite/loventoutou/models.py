@@ -4,9 +4,9 @@ from django.core.validators import RegexValidator, EmailValidator
 
 # Je crée le modèle de mon objet Propriétaire
 class Owner(models.Model):
-	first_name = models.CharField(max_length=50)
-	last_name = models.CharField(max_length=50)
-	breeding_name = models.CharField(max_length=70)
+	first_name = models.CharField('prénom', max_length=50)
+	last_name = models.CharField('nom', max_length=50)
+	breeding_name = models.CharField('elevage', max_length=70, default=None)
 	siret_number = models.PositiveBigIntegerField()
 	# Champ pour l’adresse mail
 	mail_owner = models.CharField(
@@ -30,7 +30,7 @@ class Owner(models.Model):
 # je crée le modèle de mon objet Chien
 class Dog(models.Model):
 	owner_dog = models.ForeignKey('Owner', on_delete=models.CASCADE, default=None)
-	name = models.CharField(max_length=50)
+	name = models.CharField('nom', max_length=50)
 	chip_number = models.PositiveBigIntegerField()
 	pic_profile = models.ImageField(
 		upload_to="images/",
