@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Registration</title>
+	</head>
+	<body>
+		<h2>Créez votre compte</h2>
+		<div class="Inscrivez-vous">
+			<p>
+				Remplissez ce formulaire pour votre inscription, tous les champs sont
+				obligatoires
+			</p>
+			<form action="/page-traitement-donnees" method="post">
+				<div>
+					<label for="prénom">Votre prénom</label>
+					<input
+						type="text"
+						id="prénom"
+						name="prénom"
+						placeholder="Sophie"
+						required
+					/>
+				</div>
+
+				<div>
+					<label for="nom">Votre nom</label>
+					<input
+						type="text"
+						id="nom"
+						name="nom"
+						placeholder="Marceau"
+						required
+					/>
+				</div>
+
+				<div>
+					<label for="nom">Nom de votre élevage</label>
+					<input
+						type="text"
+						id="nom de l'élevage"
+						name="nom de l'élevage"
+						placeholder="Elevage des Forges"
+						required
+					/>
+				</div>
+
+				<div>
+					<label for="nom">Numéro de Siret</label>
+					<input
+						type="text"
+						id="numéro de Siret"
+						name="siret"
+						placeholder="Siret - 14 chiffres"
+						required
+					/>
+				</div>
+
+				<div>
+					<label for="nom">Adresse</label>
+					<input
+						type="text"
+						id="adresse"
+						name="adresse"
+						placeholder="adresse complète"
+						required
+					/>
+				</div>
+				<div>
+					<label for="tel">Votre numéro de téléphone</label>
+					<input
+						type="tel"
+						id="tel"
+						name="tel"
+						placeholder="numéro de tel"
+						required
+					/>
+				</div>
+
+				<div>
+					<label for="email">Votre e-mail</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="monadresse@mail.com"
+						required
+					/>
+				</div>
+
+				<div>
+					<label for="password">Votre mot de passe</label>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="mot de passe"
+						required
+					/>
+				</div>
+				<div>
+					<label for="password">Confirmer votre mot de passe</label>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Confirmez mot de passe"
+						required
+					/>
+				</div>
+				<!--<label for="message">Votre message</label>
+<textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea> -->
+				<div>
+					<button type="submit">Enregistrer</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
