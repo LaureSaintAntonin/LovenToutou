@@ -1,17 +1,19 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+#from django.http import HttpResponse
+from django.template import loader
 
 
-def index(request):
-	return HttpResponse("Bienvenue sur LovenToutou")
+
+def index(request): 
+    return render(request, "loventoutou/index.html")
 
 def connexion(request):
-	return HttpResponse("Connectez-vous")
+	return render(request, "loventoutou/connexion.html")
 
 def user(request):
-    return HttpResponse("Votre profil")
+    return render(request, "loventoutou/user.html")
 
 def navigation(request):
-    return HttpResponse("A vous de jouer!")
+    return render(request, "loventoutou/navigation.html")
 
 # Create your views here.
