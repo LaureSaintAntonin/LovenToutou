@@ -3,6 +3,8 @@ from django.core.validators import RegexValidator, EmailValidator
 
 
 # Je crée le modèle de mon objet Propriétaire
+# Lorsque l'on rajoute un champ à un modèle déjà migré, 
+# tjs mettre une valeur par défaut (ex:default=None) sinon migration impossible
 class Owner(models.Model):
 	first_name = models.CharField('prénom', max_length=50)
 	last_name = models.CharField('nom', max_length=50)
