@@ -6,6 +6,7 @@ from django.core.validators import RegexValidator, EmailValidator
 class Owner(models.Model):
 	first_name = models.CharField(max_length=50)
 	last_name = models.CharField(max_length=50)
+	breeding_name = models.CharField(max_length=70)
 	siret_number = models.PositiveBigIntegerField()
 	# Champ pour l’adresse mail
 	mail_owner = models.CharField(
