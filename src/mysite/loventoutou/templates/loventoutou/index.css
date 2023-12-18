@@ -1,75 +1,75 @@
 body {
-  font-family: "Prompt", sans-serif;
-  background-color: #b8cbd0;
+	font-family: "Prompt", sans-serif;
+	background-color: #b8cbd0;
 }
 
 .banniere {
-  padding: 100px;
-  background-image: url("L:/SideProject/TinderToutou/src/mysite/templates/mysite/images/TinderToutou.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+	padding: 100px;
+	background-image: url("L:/SideProject/LovenToutou/src/mysite/loventoutou/templates/loventoutou/images/TinderToutou.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.9;
 }
 
 h1 {
-  display: flex;
-  flex-direction: row;
-  color: #137c8b;
-  align-items: flex-start;
-  justify-content: left;
+	display: flex;
+	flex-direction: row;
+	color: #137c8b;
+	align-items: flex-start;
+	justify-content: left;
 }
 
 h2 {
-  display: flex;
-  color: #137c8b;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	color: #137c8b;
+	align-items: center;
+	justify-content: center;
 }
 
 p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: flex-end;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #709ca7;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: flex-end;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #709ca7;
 }
 
 img {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: left;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: left;
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  background-color: #709ca7;
-  align-content: flex-start;
-  align-items: center;
-  justify-content: space-between;
+	background-color: #709ca7;
+	align-content: flex-start;
+	align-items: center;
+	justify-content: space-between;
 }
 
 button {
-  background: #7090a4;
-  color: black;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 1rem 2.85rem;
-  border-radius: 10rem;
-  transition: transform 400ms;
-  &:hoover {
-    transform: scale(1.15);
-  }
+	background: #7090a4;
+	color: black;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 1rem 2.85rem;
+	border-radius: 10rem;
+	transition: transform 400ms;
+	&:hoover {
+		transform: scale(1.15);
+	}
 }
