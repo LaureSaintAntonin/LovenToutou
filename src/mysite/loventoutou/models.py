@@ -10,13 +10,7 @@ class Owner(models.Model):
 	last_name = models.CharField('nom', max_length=50)
 	breeding_name = models.CharField('elevage', max_length=70, default=None)
 	siret_number = models.PositiveBigIntegerField()
-	# Champ pour l’adresse mail
-	mail_owner = models.CharField(
-		max_length=255,
-		validators=[EmailValidator()],
-		blank=False,
-		default=None
-	)
+	complete_address = models.TextField(max_length=250)
 	# Utilisez un champ CharField pour le numéro de téléphone
 	phone_regex = RegexValidator(
 		regex=r'^\d{10}$',  # Exemple : 1234567890 (10 chiffres)
@@ -27,7 +21,14 @@ class Owner(models.Model):
 		max_length=10,
 		blank=False,  # Le champ doit contenir un numéro
 	)
-	complete_address = models.TextField(max_length=250)
+# Champ pour l’adresse mail
+	mail_owner = models.CharField(
+		max_length=255,
+		validators=[EmailValidator()],
+		blank=False,
+		default=None
+	)
+# Champ pour les mots de passe ? fonction de hashage ?
 
 # je crée le modèle de mon objet Chien
 class Dog(models.Model):

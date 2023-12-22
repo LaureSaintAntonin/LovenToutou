@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Registration</title>
+		<meta name="description" content="page enregistrement de loventoutou" />
+		<link rel="stylesheet" href="register.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<title>LovenToutou - Créer son compte</title>
 	</head>
 	<body>
-		<h2>Créez votre compte</h2>
+		<div class="banniere"></div>
+		<h1>Créez votre compte</h1>
 		<div class="Inscrivez-vous">
 			<p>
-				Remplissez ce formulaire pour votre inscription, tous les champs sont
-				obligatoires
+				Pour une expérience sécurisée et sereine, remplissez ce formulaire pour
+				votre inscription, tous les champs sont obligatoires. Ces informations
+				sont demandées pour nous assurer que vous êtes un éleveur déclaré auprès
+				des autorités.
 			</p>
 			<form action="/page-traitement-donnees" method="post">
 				<div>
@@ -109,8 +118,6 @@
 						required
 					/>
 				</div>
-				<!--<label for="message">Votre message</label>
-<textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea> -->
 				<div>
 					<button type="submit">Enregistrer</button>
 				</div>
