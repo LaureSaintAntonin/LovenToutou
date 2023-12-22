@@ -7,9 +7,9 @@ app_name = "loventoutou"
 urlpatterns = [
 	path("", views.index, name="index"), 
 	path("connexion/", views.connexion, name="connexion"),
-	# path ("register/", views.register, name="register"),
+	path ("register/", views.register, name="register"),
 	path("", views.user, name="user"),
 	path("", views.navigation, name="navigation"),
 ]
 
-# index et connexion fonctionnent, ne pas modifier !
+# index, connexion et register fonctionnent, ne pas modifier !

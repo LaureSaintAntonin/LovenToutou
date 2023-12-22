@@ -7,8 +7,8 @@ def index(request):
 def connexion(request):
 	return render(request, "loventoutou/connexion.html")
 
-# def register(request):
-#   return render(request, "loventoutou/register.html")
+def register(request):
+    return render(request, "loventoutou/register.html")
 
 def user(request):
     return render(request, "loventoutou/user.html")
