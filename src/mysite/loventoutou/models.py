@@ -40,7 +40,7 @@ class Owner(AbstractBaseUser):
 		unique=True
 	)
 # Champ de mot de passe haché
-	password = models.TextField(max_length=128)
+	password = models.TextField(max_length=128, default=None)
 
 # Permissions 
 	is_active = models.BooleanField(default=True)
