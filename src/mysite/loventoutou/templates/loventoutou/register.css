@@ -11,6 +11,7 @@ body {
 	background-repeat: no-repeat;
 	opacity: 0.9;
 }
+
 h1 {
 	display: flex;
 	flex-direction: row;
@@ -21,19 +22,15 @@ h1 {
 
 p {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
 
 button {
 	background: #7090a4;
-	color: black;
+	border: black;
 	font-size: 1rem;
-	cursor: pointer;
-	padding: 1rem 2.85rem;
-	border-radius: 10rem;
-	transition: transform 400ms;
-	&:hoover {
-		transform: scale(1.15);
-	}
+	padding: 1rem 1.5rem;
+	border-radius: 5rem;
 }
