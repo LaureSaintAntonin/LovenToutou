@@ -2,15 +2,15 @@ from django.shortcuts import render
 
 
 def index(request): 
-    return render(request, "loventoutou/index.html")
+    return render(request, "loventoutou/index.html") #fonctionne
 
 def connexion(request):
-	return render(request, "loventoutou/connexion.html")
+	return render(request, "loventoutou/connexion.html") #fonctionne
 
 def register(request):
-    return render(request, "loventoutou/register.html")
+    return render(request, "loventoutou/register.html") #fonctionne
 
-def user(request):
+def profil(request):
     return render(request, "loventoutou/user.html")
 
 def navigation(request):
