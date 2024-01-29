@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="page accueil de loventoutou">
-    <link rel="stylesheet" href="index.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Bienvenu sur LovenToutou</title>
-  </head>
+{% extends 'loventoutou/base.html' %}
+
+{% block content %}
 
   <header>
     <img src="L:\SideProject\LovenToutou\src\mysite\loventoutou\templates\loventoutou\logo\tinderToutouLogo_v3.5.png" alt="logo">
@@ -60,4 +53,5 @@
     <img src="L:\SideProject\LovenToutou\src\mysite\loventoutou\templates\loventoutou\logo\tinderToutouLogo_v3.5.png" alt="logo">
     <!--pied de page - info complémentaires - logo -->
   </footer>
-</html>
+
+{% endblock %}
