@@ -1,126 +1,108 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="page enregistrement de loventoutou" />
-		<link rel="stylesheet" href="register.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />
-		<title>LovenToutou - Créer son compte</title>
-	</head>
-	<body>
-		<div class="banniere"></div>
-		<h1>Créez votre compte</h1>
-		<div class="Inscrivez-vous">
-			<p>
-				Pour une expérience sécurisée et sereine, remplissez ce formulaire pour
-				votre inscription, tous les champs sont obligatoires. Ces informations
-				sont demandées pour nous assurer que vous êtes un éleveur déclaré auprès
-				des autorités.
-			</p>
-			<form action="/page-traitement-donnees" method="post">
-				<div>
-					<label for="prénom">Votre prénom</label>
-					<input
-						type="text"
-						id="prénom"
-						name="prénom"
-						placeholder="Sophie"
-						required
-					/>
-				</div>
+{% extends 'loventoutou/base.html' %} {% block content %}
+<body>
+	<div class="banniere"></div>
+	<h1>Créez votre compte</h1>
+	<div class="Inscrivez-vous">
+		<p>
+			Pour une expérience sécurisée et sereine, remplissez ce formulaire pour
+			votre inscription, tous les champs sont obligatoires. Ces informations
+			sont demandées pour nous assurer que vous êtes un éleveur déclaré auprès
+			des autorités.
+		</p>
+		<form action="/page-traitement-donnees" method="post">
+			<div>
+				<label for="prénom">Votre prénom</label>
+				<input
+					type="text"
+					id="prénom"
+					name="prénom"
+					placeholder="Sophie"
+					required
+				/>
+			</div>
 
-				<div>
-					<label for="nom">Votre nom</label>
-					<input
-						type="text"
-						id="nom"
-						name="nom"
-						placeholder="Marceau"
-						required
-					/>
-				</div>
+			<div>
+				<label for="nom">Votre nom</label>
+				<input type="text" id="nom" name="nom" placeholder="Marceau" required />
+			</div>
 
-				<div>
-					<label for="nom">Nom de votre élevage</label>
-					<input
-						type="text"
-						id="nom de l'élevage"
-						name="nom de l'élevage"
-						placeholder="Elevage des Forges"
-						required
-					/>
-				</div>
+			<div>
+				<label for="nom">Nom de votre élevage</label>
+				<input
+					type="text"
+					id="nom de l'élevage"
+					name="nom de l'élevage"
+					placeholder="Elevage des Forges"
+					required
+				/>
+			</div>
 
-				<div>
-					<label for="nom">Numéro de Siret</label>
-					<input
-						type="text"
-						id="numéro de Siret"
-						name="siret"
-						placeholder="Siret - 14 chiffres"
-						required
-					/>
-				</div>
+			<div>
+				<label for="nom">Numéro de Siret</label>
+				<input
+					type="text"
+					id="numéro de Siret"
+					name="siret"
+					placeholder="Siret - 14 chiffres"
+					required
+				/>
+			</div>
 
-				<div>
-					<label for="nom">Adresse</label>
-					<input
-						type="text"
-						id="adresse"
-						name="adresse"
-						placeholder="adresse complète"
-						required
-					/>
-				</div>
-				<div>
-					<label for="tel">Votre numéro de téléphone</label>
-					<input
-						type="tel"
-						id="tel"
-						name="tel"
-						placeholder="numéro de tel"
-						required
-					/>
-				</div>
+			<div>
+				<label for="nom">Adresse</label>
+				<input
+					type="text"
+					id="adresse"
+					name="adresse"
+					placeholder="adresse complète"
+					required
+				/>
+			</div>
+			<div>
+				<label for="tel">Votre numéro de téléphone</label>
+				<input
+					type="tel"
+					id="tel"
+					name="tel"
+					placeholder="numéro de tel"
+					required
+				/>
+			</div>
 
-				<div>
-					<label for="email">Votre e-mail</label>
-					<input
-						type="email"
-						id="email"
-						name="email"
-						placeholder="monadresse@mail.com"
-						required
-					/>
-				</div>
+			<div>
+				<label for="email">Votre e-mail</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="monadresse@mail.com"
+					required
+				/>
+			</div>
 
-				<div>
-					<label for="password">Votre mot de passe</label>
-					<input
-						type="password"
-						id="password"
-						name="password"
-						placeholder="mot de passe"
-						required
-					/>
-				</div>
-				<div>
-					<label for="password">Confirmer votre mot de passe</label>
-					<input
-						type="password"
-						id="password"
-						name="password"
-						placeholder="Confirmez mot de passe"
-						required
-					/>
-				</div>
+			<div>
+				<label for="password">Votre mot de passe</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="mot de passe"
+					required
+				/>
+			</div>
+			<div>
+				<label for="password">Confirmer votre mot de passe</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Confirmez mot de passe"
+					required
+				/>
+			</div>
 
-				<button type="submit">Enregistrer</button>
-			</form>
-		</div>
-	</body>
-</html>
+			<button type="submit">Enregistrer</button>
+		</form>
+	</div>
+</body>
+{% endblock %}
