@@ -8,8 +8,8 @@ urlpatterns = [
 	path("", views.index, name="index"), 
 	path("connexion/", views.connexion, name="connexion"),
 	path ("register/", views.register, name="register"),
-	path("", views.user, name="user"),
-	path("", views.navigation, name="navigation"),
+	path("profil", views.profil, name="profil"),
+	path("navigation", views.navigation, name="navigation"),
 ]
 
 # index, connexion et register fonctionnent, ne pas modifier !
