@@ -15,5 +15,8 @@ def user(request):
 
 def navigation(request):
     return render(request, "loventoutou/navigation.html")
+# mettre des variables de gabarit { 'first_band' : bands [0]} - 
+# ceci est un exemple de variable de gabarit -à adapter en fonction
+
 
 # Create your views here.
