@@ -7,9 +7,11 @@ app_name = "loventoutou"
 urlpatterns = [
 	path("", views.index, name="index"), 
 	path("connexion/", views.connexion, name="connexion"),
-	path ("register/", views.register, name="register"),
-	path("profil", views.profil, name="profil"),
-	path("navigation", views.navigation, name="navigation"),
+	path("register/", views.register, name="register"),
+	path("register/profil/", views.profil, name="profil"),
+	path("profil/", views.profil, name="profil"),
+	path("connexion/profil/", views.profil, name="profil"),
+	path("navigation/", views.navigation, name="navigation"),
 ]
 
-# index, connexion et register fonctionnent, ne pas modifier !
+# index, connexion, register, profil et navigation fonctionnent, ne pas modifier !
