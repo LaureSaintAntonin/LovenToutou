@@ -9,10 +9,15 @@ def connexion(request):
 	return render(request, "loventoutou/connexion.html") #fonctionne
 
 def register(request):
-    if request.method == "POST":
-        print(request.POST)
     
-    form = OwnerForm()
+    if request.method == "POST":
+        form = OwnerForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            #return HttpResponse("Merci de votre inscription")
+    else:            
+        form = OwnerForm
+    
     
     return render(request, "loventoutou/register.html", {"form": form}) #fonctionne
 
