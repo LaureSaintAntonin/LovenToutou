@@ -9,56 +9,13 @@
 			sont demandées pour nous assurer que vous êtes un éleveur déclaré auprès
 			des autorités.
 		</p>
-		<form action="/page-traitement-donnees" method="post">
-			<div>
-				<label for="prénom">Votre prénom</label>
-				<input
-					type="text"
-					id="prénom"
-					name="prénom"
-					placeholder="Sophie"
-					required
-				/>
-			</div>
 
-			<div>
-				<label for="nom">Votre nom</label>
-				<input type="text" id="nom" name="nom" placeholder="Marceau" required />
-			</div>
-
-			<div>
-				<label for="nom">Nom de votre élevage</label>
-				<input
-					type="text"
-					id="nom de l'élevage"
-					name="nom de l'élevage"
-					placeholder="Elevage des Forges"
-					required
-				/>
-			</div>
-
-			<div>
-				<label for="nom">Numéro de Siret</label>
-				<input
-					type="text"
-					id="numéro de Siret"
-					name="siret"
-					placeholder="Siret - 14 chiffres"
-					required
-				/>
-			</div>
-
-			<div>
-				<label for="nom">Adresse</label>
-				<input
-					type="text"
-					id="adresse"
-					name="adresse"
-					placeholder="adresse complète"
-					required
-				/>
-			</div>
-			<div>
+		<form method="post">
+			{% csrf_token %}
+			<table>
+				{{ form.as_table }}
+			</table>
+			<!-- <div>
 				<label for="tel">Votre numéro de téléphone</label>
 				<input
 					type="tel"
@@ -99,7 +56,7 @@
 					placeholder="Confirmez mot de passe"
 					required
 				/>
-			</div>
+			</div> -->
 			<button onclick="window.location.href = 'profil';">Enregistrer</button>
 			<!-- <button type="submit">Enregistrer</button> -->
 		</form>

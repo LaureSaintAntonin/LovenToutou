@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from loventoutou.forms import OwnerForm
 
 
 def index(request): 
@@ -8,7 +9,12 @@ def connexion(request):
 	return render(request, "loventoutou/connexion.html") #fonctionne
 
 def register(request):
-    return render(request, "loventoutou/register.html") #fonctionne
+    if request.method == "POST":
+        print(request.POST)
+    
+    form = OwnerForm()
+    
+    return render(request, "loventoutou/register.html", {"form": form}) #fonctionne
 
 def profil(request):
     return render(request, "loventoutou/user.html")
