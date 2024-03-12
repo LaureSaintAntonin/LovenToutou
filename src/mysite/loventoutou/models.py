@@ -19,20 +19,20 @@ class Owner(AbstractBaseUser):
 	first_name = models.CharField('prénom', max_length=50)
 	last_name = models.CharField('nom', max_length=50)
 	breeding_name = models.CharField('elevage', max_length=70, default=None)
-	siret_number = models.PositiveBigIntegerField()
-	complete_address = models.TextField(max_length=250)
+	siret_number = models.PositiveBigIntegerField('numéro de siret')
+	complete_address = models.TextField('adresse', max_length=250)
 	# Utilisez un champ CharField pour le numéro de téléphone
 	phone_regex = RegexValidator(
 		regex=r'^\d{10}$',  # Exemple : 1234567890 (10 chiffres)
 		message="Le numéro de téléphone doit contenir 10 chiffres."
 	)
-	phone_number = models.CharField(
+	phone_number = models.CharField('numéro de téléphone',
 		validators=[phone_regex],
 		max_length=10,
 		blank=False,  # Le champ doit contenir un numéro
 	)
 # Champ pour l’adresse mail
-	mail_owner = models.CharField(
+	mail_owner = models.CharField('adresse mail',
 		max_length=255,
 		validators=[EmailValidator()],
 		blank=False,
@@ -40,7 +40,7 @@ class Owner(AbstractBaseUser):
 		unique=True
 	)
 # Champ de mot de passe haché
-	password = models.TextField(max_length=128, default=None)
+	password = models.TextField('mot de passe', max_length=128, default=None)
 
 # Permissions 
 	is_active = models.BooleanField(default=True)

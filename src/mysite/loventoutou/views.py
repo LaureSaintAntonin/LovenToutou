@@ -14,12 +14,12 @@ def register(request):
         form = OwnerForm(request.POST)
         if form.is_valid():
             print(form.cleaned_data)
-            #return HttpResponse("Merci de votre inscription")
+            #return HttpResponse("Merci de votre inscription" ou un autre template à créer)
     else:            
         form = OwnerForm
     
     
-    return render(request, "loventoutou/register.html", {"form": form}) #fonctionne
+    return render(request, "loventoutou/register.html", {"form": form})
 
 def profil(request):
     return render(request, "loventoutou/user.html")
@@ -29,5 +29,3 @@ def navigation(request):
 # mettre des variables de gabarit { 'first_band' : bands [0]} - 
 # ceci est un exemple de variable de gabarit -à adapter en fonction
 
-
-# Create your views here.

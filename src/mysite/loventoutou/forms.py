@@ -5,4 +5,4 @@ from loventoutou.models import Owner
 class OwnerForm(ModelForm):
     class Meta:
         model = Owner
-        fields = ["first_name","last_name", "breeding_name","siret_number","complete_address"]
+        fields = ["first_name","last_name", "breeding_name","siret_number","complete_address","phone_number", "mail_owner","password"]
