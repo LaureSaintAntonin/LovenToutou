@@ -5,4 +5,7 @@ from loventoutou.models import Owner
 class OwnerForm(ModelForm):
     class Meta:
         model = Owner
-        fields = ["first_name","last_name", "breeding_name","siret_number","complete_address","phone_number", "mail_owner","password"]
+        fields = "__all__"
+        #possible de choisir les champs en faisant une liste ["nom", "prénom"]
+        #possible de faire aussi un exclude = ["is_active", "is_staff"] - mais peu utilisé 
+        #--> fonctionne 

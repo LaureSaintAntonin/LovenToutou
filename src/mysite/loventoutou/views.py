@@ -9,17 +9,15 @@ def connexion(request):
 	return render(request, "loventoutou/connexion.html") #fonctionne
 
 def register(request):
-    
     if request.method == "POST":
         form = OwnerForm(request.POST)
         if form.is_valid():
-            print(form.cleaned_data)
-            #return HttpResponse("Merci de votre inscription" ou un autre template à créer)
+            form.save()
     else:            
-        form = OwnerForm
+        form = OwnerForm() 
     
-    
-    return render(request, "loventoutou/register.html", {"form": form})
+    return render(request, "loventoutou/register.html", {"form": form}) #--> fonctionne
+
 
 def profil(request):
     return render(request, "loventoutou/user.html")
