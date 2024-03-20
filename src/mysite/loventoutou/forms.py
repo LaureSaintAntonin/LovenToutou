@@ -9,3 +9,9 @@ class OwnerForm(ModelForm):
         #possible de choisir les champs en faisant une liste ["nom", "prénom"]
         #possible de faire aussi un exclude = ["is_active", "is_staff"] - mais peu utilisé 
         #--> fonctionne 
+        
+# class OwnerForm(ModelForm):
+#     class Meta:
+#         model = Owner
+#         fields = ["mail_owner", "password"]
+        

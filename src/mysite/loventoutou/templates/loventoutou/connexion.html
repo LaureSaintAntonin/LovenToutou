@@ -7,6 +7,10 @@
 	<h1>Connectez-vous</h1>
 	<div class="Connectez-vous">
 		<form method="post">
+			{% csrf_token %}
+			<table>
+				{{ form.as_table }}
+			</table>
 			<!-- <button type="submit">Connectez-vous</button> -->
 			<button onclick="window.location.href = 'profil';">Connectez-vous</button>
 			<!--a href="profil.html">accédez à votre profil</a>-->

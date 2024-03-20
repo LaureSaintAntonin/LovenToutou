@@ -6,7 +6,14 @@ def index(request):
     return render(request, "loventoutou/index.html") #fonctionne
 
 def connexion(request):
-	return render(request, "loventoutou/connexion.html") #fonctionne
+    # if request.method == "POST":
+    #     form = OwnerForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    # else:
+    #     form = OwnerForm()
+        
+    return render(request, "loventoutou/connexion.html",) #{"form": form})
 
 def register(request):
     if request.method == "POST":
