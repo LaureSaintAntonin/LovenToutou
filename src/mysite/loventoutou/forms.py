@@ -1,3 +1,4 @@
+from django import forms
 from django.forms import ModelForm
 from loventoutou.models import Owner
 
@@ -10,8 +11,6 @@ class OwnerForm(ModelForm):
         #possible de faire aussi un exclude = ["is_active", "is_staff"] - mais peu utilisé 
         #--> fonctionne 
         
-# class OwnerForm(ModelForm):
-#     class Meta:
-#         model = Owner
-#         fields = ["mail_owner", "password"]
-        
+class ConnectForm(forms.Form):
+    mail_owner = forms.EmailField()
+    password = forms.CharField()

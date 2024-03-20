@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from loventoutou.forms import ConnectForm
 from loventoutou.forms import OwnerForm
 
 
@@ -6,14 +7,14 @@ def index(request):
     return render(request, "loventoutou/index.html") #fonctionne
 
 def connexion(request):
-    # if request.method == "POST":
-    #     form = OwnerForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    # else:
-    #     form = OwnerForm()
+    if request.method == "POST":
+        forms = ConnectForm(request.POST)
+        if forms.is_valid():
+            forms.save()
+    else:
+        forms = ConnectForm()
         
-    return render(request, "loventoutou/connexion.html",) #{"form": form})
+    return render(request, "loventoutou/connexion.html", {"forms": forms}) #--> fonctionne
 
 def register(request):
     if request.method == "POST":
