@@ -14,7 +14,7 @@ def connexion(request):
     else:
         forms = ConnectForm()
         
-    return render(request, "loventoutou/connexion.html", {"forms": forms}) #--> fonctionne
+    return render(request, "loventoutou/connexion.html", {"forms": forms})
 
 def register(request):
     if request.method == "POST":
@@ -24,8 +24,9 @@ def register(request):
     else:            
         form = OwnerForm() 
     
-    return render(request, "loventoutou/register.html", {"form": form}) #--> fonctionne
-
+    return render(request, "loventoutou/register.html", {"form": form}) #--> fonctionne et implémente bien 
+# la bdd. Fichier Bdd qui note une modification dans VSC. Mais infor restent sur le formulaire. 
+# A Corriger.
 
 def profil(request):
     return render(request, "loventoutou/user.html")
