@@ -1,11 +1,10 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="page accueil de loventoutou" />
-		<link rel="stylesheet" href="{% static 'loventoutou/index.css' %}" />
+		<link rel="stylesheet" href="{% static 'index.css' %}" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
 			rel="stylesheet"
@@ -13,9 +12,7 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<title>LovenToutou</title>
 	</head>
-	<body>
-		{% block content %}{% endblock %}
-	</body>
+	<body></body>
 	<footer>
 		<img
 			src="L:\SideProject\LovenToutou\src\mysite\loventoutou\templates\loventoutou\logo\tinderToutouLogo_v3.5.png"
@@ -23,3 +20,4 @@
 		/>
 	</footer>
 </html>
+{% endblock %}
