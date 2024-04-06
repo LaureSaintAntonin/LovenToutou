@@ -13,6 +13,8 @@ Application qui met en relation les éleveurs canins entre eux, via des profils 
 
 ## 🛠️ Installation
 
+Commencer par télécharger le repo. Puis :
+
 - pour lancer le venv :
   dans le terminal, depuis le dossier qui contient le dossier .venv - taper \.venv\Scripts\Activate.ps1
 
@@ -23,8 +25,8 @@ Une fois l'environnement virtuel et le serveur lancé, vous avez accès à l'app
 
 ## 🧐 Features
 
-- Feature 1 : compte personnel
-- Feature 2 : profil animal avec caractéristiques comportementales, lof, dossier médical et tests génétique
+- Feature 1 : compte personnel, bdd, formulaire d'inscription
+- Feature 2 : profil animal avec caractéristiques comportementales, lof, dossier médical et tests génétiques
 - Feature 3 : swipe, mise en relation via chat, version mobile etc...
 
 # <p align="center">Toujours en construction</p>
