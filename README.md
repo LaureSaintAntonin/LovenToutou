@@ -25,8 +25,8 @@ Une fois l'environnement virtuel et le serveur lancé, vous avez accès à l'app
 
 ## 🧐 Features
 
-- Feature 1 : compte personnel, bdd, formulaire d'inscription
-- Feature 2 : profil animal avec caractéristiques comportementales, lof, dossier médical et tests génétiques
+- Feature 1 : bdd, formulaire d'inscription et de connexion
+- Feature 2 : profil animal avec caractéristiques comportementales, photos, lof, dossier médical et tests génétiques
 - Feature 3 : swipe, mise en relation via chat, version mobile etc...
 
 # <p align="center">Toujours en construction</p>
