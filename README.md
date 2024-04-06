@@ -4,10 +4,20 @@ Application qui met en relation des éleveurs canins, via des profils "à la man
 
 ## 🛠️ Tech Stack
 
-- [Python]()
-- [Django]()
+- [Python 3.12]()
+- [Django 5]()
 - [Html]()
 - [CSS]()
+
+## 🛠️ Installation
+
+- pour lancer le venv :
+  dans le terminal, depuis le dossier qui contient le dossier .venv - taper \.venv\Scripts\Activate.ps1
+
+- pour lancer le serveur :
+  dans le terminal, depuis le dossier qui contient le fichier manage.py (src/mysite) - taper python manage.py runserver
+
+Une fois l'environnement virtuel et le serveur lancé, vous avez accès à l'application.
 
 ## 🧐 Features
 

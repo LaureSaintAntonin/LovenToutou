@@ -9,7 +9,7 @@ dans le terminal, depuis le dossier qui contient le fichier manage.py, src/mysit
 Projets vs.
 applications
 
-    Quelle est la différence entre un projet et une application ?
+    Quelques petites informations complémentaires : 
 
         Un projet est un ensemble de réglages et d’applications pour un site Web particulier.
         Un projet peut contenir plusieurs applications.
@@ -27,17 +27,6 @@ Dans mon arborescence :
 src/mysite -> dossier source
 mysite -> mon projet, mes réglages.
 loventoutou -> mon application.
-
-Le serveur met un message derreur
-(...File "<frozen importlib._bootstrap>", line 1387, in \_gcd_import
-File "<frozen importlib._bootstrap>", line 1360, in \_find_and_load
-File "<frozen importlib._bootstrap>", line 1324, in \_find_and_load_unlocked
-ModuleNotFoundError: No module named 'user')
-
-lorsque je rajoute une urlpattern (path("", views.user, name="user"))
-au fichier loventoutou/urls.py
---> trouver une autre façon de rajouter des urls pour mes autres pages
-=>(user_connexion, profil, navigation) - voir fichier .txt pensebete.
 
 BDD
 * Modifiez les modèles (dans models.py).
