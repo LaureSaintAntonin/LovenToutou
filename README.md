@@ -1,6 +1,8 @@
-# <p align="center">LovenToutou</p>
+![Image](src/mysite/static/logo/tinderToutouLogo_v3.4.png)
 
-Application qui met en relation des éleveurs canins, via des profils "à la manière de tinder" (l'application de rencontre).
+#LovenToutou
+
+Application qui met en relation les éleveurs canins entre eux, via des profils "à la manière de tinder" (l'application de rencontre).
 
 ## 🛠️ Tech Stack
 
