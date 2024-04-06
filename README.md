@@ -5,10 +5,10 @@ Application qui met en relation des éleveurs canins, via des profils "à la man
 
 
 ## 🛠️ Tech Stack
-- [Python]()
-- [Django]()
-- [Html]()
-- [CSS]()
+- [Python 3.12]()
+- [Django 5]()
+- [Html 5]()
+- [CSS 3]()
     
 
 
