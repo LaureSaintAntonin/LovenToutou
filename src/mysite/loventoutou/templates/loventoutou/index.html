@@ -1,9 +1,9 @@
 {% extends 'loventoutou/base.html' %}
-
+{% load static %}
 {% block content %}
 
   <header>
-    <img src="L:\SideProject\LovenToutou\src\mysite\loventoutou\templates\loventoutou\logo\tinderToutouLogo_v3.5.png" alt="logo">
+    <img src="{% static 'tinderToutouLogo_v3.5.png'%}" alt="logo">
     <h1><strong>Bienvenue sur LovenToutou</strong></h1>
     <nav>
       <button onclick="window.location.href = 'connexion';">Connectez-vous</button> 
@@ -34,7 +34,7 @@
         <dd>
           Vous rechercher un étalon pour votre chienne, ou une chienne pour
           votre étalon ; vous souhaitez amener du sang nouveau dans votre
-          élevage, swipez et likez
+          élevage, créez votre compte et commencer à liker !
         </dd>
       </section>
       <section>
