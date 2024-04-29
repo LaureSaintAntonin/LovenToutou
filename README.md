@@ -1,4 +1,4 @@
-![Image](src/mysite/static/logo/tinderToutouLogo_v3.4.png)
+![Image](src/mysite/loventoutou/static/logo/tinderToutouLogo_v3.4.png)
 
 # LovenToutou
 
@@ -30,4 +30,5 @@ Une fois l'environnement virtuel et le serveur lancé, vous avez accès à l'app
 - Feature 3 : swipe, mise en relation via chat, version mobile etc...
 
 # <p align="center">Toujours en construction</p>
+
 ![Visitor Count](https://profile-counter.glitch.me/{LaureSaintAntonin}/count.svg)
