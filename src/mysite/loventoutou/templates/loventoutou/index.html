@@ -1,24 +1,37 @@
-{% extends 'loventoutou/base.html' %}
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="page accueil de loventoutou" />
+		<link
+			rel="stylesheet"
+			href="L:\SideProject\LovenToutou\src\mysite\loventoutou\static\CSS\index.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<title>LovenToutou</title>
+	</head>
 
-  <header>
-    <img src="{% static 'tinderToutouLogo_v3.5.png'%}" alt="logo">
+<header>
+    <img src="L:\SideProject\LovenToutou\src\mysite\loventoutou\static\logo\tinderToutouLogo_v3.5.png" alt="logo">
     <h1><strong>Bienvenue sur LovenToutou</strong></h1>
     <nav>
-      <button onclick="window.location.href = 'connexion';">Connectez-vous</button> 
-      <!-- les 2 boutons fonctionnent on n'y touche plus -->
-      <button onclick="window.location.href = 'register';">première visite, Inscrivez-vous</button>
-      <!-- en tete - logo -->
+        <button onclick="window.location.href = 'connexion';">Connectez-vous</button> 
+        <!-- les 2 boutons fonctionnent on n'y touche plus -->
+        <button onclick="window.location.href = 'register';">première visite, Inscrivez-vous</button>
+        <!-- en tete - logo -->
     </nav>
-  </header>
+</header>
 
-  <main>
+<main>
     <body>
       <div class="banniere">
       </div>
       <section>
-      <h2>L'application des éleveurs 3.0</h2>
+      <h2>L'application des éleveurs 2.0</h2>
       <p>Touvez le partenaire idéal pour votre chien :</p>
       </section>
       <section>
@@ -40,16 +53,19 @@
       <section>
         <dt><strong>dossier médical obligatoire</strong></dt>
         <dd>Questionnaire de santé à remplir</dd>
-      </dl>
-      </section>
-      
+        </dl>
+        </section>
     </body>
-  </main>
-  <footer>
+</main>
+<footer>
     <p>mentions légales :</p>
     <p>Cette applicatione est créée dans le but d'un apprentissage en vue d'une reconversion <br>
     professionnelle. En aucun cas elle ne saurait être mise en ligne à des fins commerciales </p>
     <!--pied de page - info complémentaires - logo -->
-  </footer>
+    <img
+			src="L:\SideProject\LovenToutou\src\mysite\loventoutou\src\mysite\static\logo\tinderToutouLogo_v3.5.png"
+			alt="logo"
+		/>
+</footer>
 
-{% endblock %}
+</html>
