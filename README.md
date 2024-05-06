@@ -13,6 +13,14 @@ Application qui met en relation les éleveurs canins entre eux, via des profils 
 
 ## 🛠️ Installation
 
+Pré requis :
+apt install python-is-python3
+apt install python3-pip
+
+Install:
+pip3 install virtualenv
+pip install django
+
 Commencer par télécharger le repo. Puis :
 
 - pour lancer le venv :
@@ -29,6 +37,6 @@ Une fois l'environnement virtuel et le serveur lancé, vous avez accès à l'app
 - Feature 2 : profil animal avec caractéristiques comportementales, photos, lof, dossier médical et tests génétiques
 - Feature 3 : swipe, mise en relation via chat, version mobile etc...
 
-# <p align="center">Toujours en construction</p>
+# <p align="center">En construction</p>
 
 ![Visitor Count](https://profile-counter.glitch.me/{LaureSaintAntonin}/count.svg)

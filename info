@@ -1,5 +1,5 @@
 pour lancer le venv :
-taper L:\SideProject\LovenToutou\.venv\Scripts\Activate.ps1
+taper .venv\Scripts\Activate.ps1
 dans le terminal, depuis le dossier qui contient le dossier .venv L:\SideProject\LovenToutou>
 
 pour lancer le serveur
