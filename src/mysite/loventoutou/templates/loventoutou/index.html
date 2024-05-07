@@ -3,6 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="page accueil de loventoutou" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="../../static/CSS/index.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
@@ -18,62 +25,72 @@
 
 	<header>
 		<img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo" />
-		<h1><strong>Bienvenue sur LovenToutou</strong></h1>
-		<nav>
-			<button onclick="window.location.href = 'connexion';">
-				Connectez-vous
-			</button>
+		<div>
+			<h1>LovenToutou</h1>
+			<h2>
+				L'application des éleveurs 2.0, touvez le partenaire idéal pour votre
+				chien
+			</h2>
+		</div>
+		<nav class="topnav">
+			<a onclick="window.location.href = '/connexion';">Connectez-vous</a>
 			<!-- les 2 boutons fonctionnent on n'y touche plus -->
-			<button onclick="window.location.href = 'register';">
-				première visite, Inscrivez-vous
-			</button>
+			<a onclick="window.location.href = '/register';"
+				>première visite, Inscrivez-vous</a
+			>
 			<!-- en tete - logo -->
 		</nav>
 	</header>
-
 	<main>
 		<body>
-			<div class="banniere"></div>
-			<section>
-				<h2>L'application des éleveurs 2.0</h2>
-				<p>Touvez le partenaire idéal pour votre chien :</p>
-			</section>
-			<section>
-				<dl>
-					<dt><strong> profil personnel de l'animal</strong></dt>
-					<dd>
-						Personnaliser le profil avec des photos, du texte, et bien entendu
-						le dossier médical avec les tests génétiques obligatoires
-					</dd>
-				</dl>
-			</section>
-			<section>
-				<dl>
-					<dt><strong>facile à utiliser</strong></dt>
-					<dd>
-						Vous rechercher un étalon pour votre chienne, ou une chienne pour
-						votre étalon ; vous souhaitez amener du sang nouveau dans votre
-						élevage, créez votre compte et commencer à liker !
-					</dd>
-				</dl>
-			</section>
-			<section>
-				<dl>
-					<dt><strong>dossier médical obligatoire</strong></dt>
-					<dd>Questionnaire de santé à remplir</dd>
-				</dl>
-			</section>
+			<div class="hero">
+				<img
+					class="img-hero"
+					src="../../static/images/ai-generated-8712229_1280.png"
+					alt="image de chien"
+				/>
+				<div class="text-right">
+					<section>
+						<i class="fa-solid fa-shield-dog"></i>
+						<dl>
+							<dt>Profil personnel de l'animal</dt>
+							<dd>
+								Personnaliser le profil avec des photos, du texte, et bien
+								entendu le dossier médical avec les tests génétiques
+								obligatoires
+							</dd>
+						</dl>
+					</section>
+					<section>
+						<i class="fa-solid fa-shield-heart"></i>
+						<dl>
+							<dt><strong>Facile à utiliser</strong></dt>
+							<dd>
+								Vous rechercher un étalon pour votre chienne, ou une chienne
+								pour votre étalon ; vous souhaitez amener du sang nouveau dans
+								votre élevage, créez votre compte et commencer à liker !
+							</dd>
+						</dl>
+					</section>
+					<section>
+						<i class="fa-solid fa-star-of-life"></i>
+						<dl>
+							<dt><strong>Dossier médical obligatoire</strong></dt>
+							<dd>Questionnaire de santé à remplir</dd>
+						</dl>
+					</section>
+				</div>
+			</div>
 		</body>
 	</main>
 	<footer>
-		<p>mentions légales :</p>
+		<p class="p5">mentions légales :</p>
 		<p>
 			Cette applicatione est créée dans le but d'un apprentissage en vue d'une
 			reconversion <br />
 			professionnelle. En aucun cas elle ne saurait être mise en ligne à des
 			fins commerciales
 		</p>
-		<!--pied de page - info complémentaires - logo -->
 		<img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo" />
 	</footer>
 </html>

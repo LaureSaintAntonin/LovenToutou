@@ -1,75 +1,145 @@
 body {
 	font-family: "Prompt", sans-serif;
-	background-color: #b8cbd0;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #0d727d;
+	display: flex;
+	flex-direction: column;
 }
 
-.banniere {
-	padding: 100px;
-	background-image: url("../../static/images/TinderToutou.png");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	opacity: 0.9;
+html {
+	height: 100%;
+}
+
+.hero {
+	padding: 2rem;
+	margin-left: 5rem;
+	margin-right: 5rem;
+}
+
+.img-hero {
+	opacity: 60%;
+	width: 35%;
+}
+
+.text-right {
+	float: right;
+	width: 50%;
+	columns: 1 auto;
+	font-size: x-large;
+	padding-top: 4rem;
+}
+
+.content {
+	padding-bottom: 10rem;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	height: 100%;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dl {
+	margin-left: 2rem;
+}
+
+i {
+	color: #a31818;
+	float: left;
+	align-items: center;
+	padding-right: 1rem;
+	font-size: 4rem;
 }
 
 h1 {
+	color: #a31818;
 	display: flex;
 	flex-direction: row;
-	color: #137c8b;
 	align-items: flex-start;
 	justify-content: left;
+	font-size: 4rem;
 }
 
-h2 {
-	display: flex;
-	color: #137c8b;
-	align-items: center;
-	justify-content: center;
-}
-
-p {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.h2-register {
+	color: #a31818;
 }
 
 header {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	align-items: center;
-	align-content: flex-end;
 	justify-content: space-between;
-	padding: 10px;
-	background-color: #709ca7;
+	padding: 1rem;
 }
-
-img {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: left;
-}
-
 footer {
 	display: flex;
 	flex-direction: row;
-
 	background-color: #709ca7;
 	align-content: flex-start;
 	align-items: center;
 	justify-content: space-between;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: auto;
+	color: black;
 }
 
-button {
-	background: #7090a4;
-	color: black;
-	font-size: 1rem;
-	cursor: pointer;
-	padding: 1rem 2.85rem;
-	border-radius: 10rem;
-	transition: transform 400ms;
-	&:hoover {
-		transform: scale(1.15);
-	}
+.topnav a {
+	color: #137c8b;
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 2rem;
+	text-decoration: underline #0d727d;
+}
+
+.topnav a:hover {
+	text-decoration: underline #a31818;
+	color: #a31818;
+}
+
+.p5 {
+	padding-left: 5rem;
+}
+
+input {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	width: 100%;
+	margin: 8px 0;
+	text-indent: 1em;
+	padding: 10px 0;
+	border-radius: 3px;
+	border: 1px solid #0d727d;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.button-primary {
+	padding: 11px 14px;
+	border: 2px solid #a31818;
+	font-size: 16px;
+	line-height: 3px;
+	font-weight: 600;
+	text-align: center;
+	color: #a31818;
+	background: #fff;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	border-radius: 2rem;
+	margin-top: 1rem;
+}
+
+.text-register {
+	padding: 1rem;
+	background-color: antiquewhite;
+	border: 2px solid #a31818;
+	width: 100%;
 }

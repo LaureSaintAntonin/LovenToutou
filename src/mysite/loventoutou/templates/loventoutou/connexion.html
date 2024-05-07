@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="page connexion loventoutou" />
-		<link rel="stylesheet" href="../../static/CSS/index.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="icon"
-			href="../../static/logo/favicon-16x16.png"
-			type="image/x-icon"
-		/>
-		<title>LovenToutou</title>
-	</head>
-
-	<header>
-		<img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo" />
-		<h1><strong>Bienvenue sur LovenToutou</strong></h1>
-		<nav>
-			<button onclick="window.location.href = 'connexion';">
-				Connectez-vous
-			</button>
-			<!-- les 2 boutons fonctionnent on n'y touche plus -->
-			<button onclick="window.location.href = 'register';">
-				première visite, Inscrivez-vous
-			</button>
-			<!-- en tete - logo -->
-		</nav>
-	</header>
-	<body>
-		<div class="banniere"></div>
-		<div>
-			<button onclick="window.location.href = 'index';">Accueil</button>
-		</div>
-		<h1>Connectez-vous</h1>
-		<div class="Connectez-vous">
-			<form method="post">
-				{% csrf_token %}
-				<table>
-					{{ forms.as_table }}
-				</table>
-				<!-- <button type="submit">Connectez-vous</button> -->
-				<button onclick="window.location.href = 'profil';">
-					Connectez-vous
-				</button>
-				<!--a href="profil.html">accédez à votre profil</a>-->
-			</form>
-		</div>
-	</body>
+    <head>
+       <meta charset="UTF-8" />
+       <meta name="description" content="page connexion loventoutou" />
+       <link rel="stylesheet" href="../../static/CSS/index.css"/>
+       <link
+          href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
+          rel="stylesheet"
+       />
+       <link rel="icon" href="../../static/logo/favicon-16x16.png" type="image/x-icon"/>
+       <title>LovenToutou</title>
+    </head>
+    <header>
+       <img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo">
+       <div>
+          <h1>LovenToutou</h1>
+          <h2>L'application des éleveurs 2.0, touvez le partenaire idéal pour votre chien
+          </h2>
+       </div>
+       <nav class="topnav">
+          <a onclick="window.location.href = '/';">Accueil</a>
+          <a onclick="window.location.href = '/register';">première visite, Inscrivez-vous</a>
+       </nav>
+    </header>
+    <body>
+    <div class="content">
+       <div class="Connectez-vous">
+          <form method="post">
+             <h2>Connectez vous</h2>
+             {% csrf_token %}
+             <table>
+                {{ forms.as_table }}
+             </table>
+             <button class="button-primary" type="submit">Connectez-vous</button>
+             <!--a href="profil.html">accédez à votre profil</a>-->
+          </form>
+       </div>
+    </body>
 </html>
+
+
+
+
+
+
