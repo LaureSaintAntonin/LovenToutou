@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-       <meta charset="UTF-8" />
-       <meta name="description" content="page connexion loventoutou" />
-       <link rel="stylesheet" href="../../static/CSS/index.css"/>
-       <link
-          href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
-          rel="stylesheet"
-       />
-       <link rel="icon" href="../../static/logo/favicon-16x16.png" type="image/x-icon"/>
-       <title>LovenToutou</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="page connexion loventoutou" />
+        <link rel="stylesheet" href="../../static/CSS/index.css"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="../../static/logo/favicon-16x16.png" type="image/x-icon"/>
+        <title>LovenToutou</title>
     </head>
     <header>
-       <img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo">
-       <div>
-          <h1>LovenToutou</h1>
-          <h2>L'application des éleveurs 2.0, touvez le partenaire idéal pour votre chien
-          </h2>
-       </div>
-       <nav class="topnav">
-          <a onclick="window.location.href = '/';">Accueil</a>
-          <a onclick="window.location.href = '/register';">première visite, Inscrivez-vous</a>
-       </nav>
+        <img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo">
+        <div>
+            <h1>LovenToutou</h1>
+            <h2>L'application des éleveurs 2.0, touvez le partenaire idéal pour votre chien
+            </h2>
+        </div>
+        <nav class="topnav">
+            <a onclick="window.location.href = '/';">Accueil</a>
+            <!-- <a onclick="window.location.href = '/register';">première visite, Inscrivez-vous</a> -->
+        </nav>
     </header>
+    <main>
     <body>
     <div class="content">
-       <div class="Connectez-vous">
-          <form method="post">
-             <h2>Connectez vous</h2>
-             {% csrf_token %}
-             <table>
+        <div class="Connectez-vous">
+            <form method="post">
+                <h2>Connectez vous</h2>
+                {% csrf_token %}
+                <table>
                 {{ forms.as_table }}
-             </table>
-             <button class="button-primary" type="submit">Connectez-vous</button>
-             <!--a href="profil.html">accédez à votre profil</a>-->
-          </form>
-       </div>
+                </table>
+                <button class="button-primary" type="submit">Connectez-vous</button>
+                <!--a href="profil.html">accédez à votre profil</a>-->
+            </form>
+        </div>
     </body>
+</main>
+<footer>
+    <p class="p5">mentions légales :</p>
+    <p>
+        Cette applicatione est créée dans le but d'un apprentissage en vue d'une
+        reconversion <br />
+        professionnelle. En aucun cas elle ne saurait être mise en ligne à des
+        fins commerciales
+    </p>
+    <img src="../../static/logo/tinderToutouLogo_v3.5.png" alt="logo" />
+</footer>
 </html>
 
 

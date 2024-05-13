@@ -62,7 +62,7 @@ class Owner(AbstractBaseUser):
        super().save(*args, **kwargs)
 
 # Cette méthode retourne une représentation sous forme de chaîne de l'objet Owner. 
-# Dans ce cas, c'est l'adresse e-mail du propriétaire dans django admin
+# Dans ce cas, c'est le nom de famille du propriétaire dans django admin
     def __str__(self):
         return self.last_name
 #fonctionne
