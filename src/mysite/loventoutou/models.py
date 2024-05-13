@@ -23,21 +23,21 @@ class Owner(AbstractBaseUser):
     complete_address = models.CharField('adresse', max_length=250)
     # Utilisez un champ CharField pour le numéro de téléphone
     phone_regex = RegexValidator(
-       regex=r'^\d{10}$',  # Exemple : 1234567890 (10 chiffres)
-       message="Le numéro de téléphone doit contenir 10 chiffres."
+        regex=r'^\d{10}$',  # Exemple : 1234567890 (10 chiffres)
+        message="Le numéro de téléphone doit contenir 10 chiffres."
     )
     phone_number = models.CharField('numéro de téléphone',
-       validators=[phone_regex],
-       max_length=10,
-       blank=False,  # Le champ doit contenir un numéro
+        validators=[phone_regex],
+        max_length=10,
+        blank=False,  # Le champ doit contenir un numéro
     )
 # Champ pour l'adresse mail
     mail_owner = models.CharField('adresse mail',
-       max_length=255,
-       validators=[EmailValidator()],
-       blank=False,
-       default=None,
-       unique=True
+        max_length=255,
+        validators=[EmailValidator()],
+        blank=False,
+        default=None,
+        unique=True
     )
 # Champ de mot de passe haché
     password = models.CharField('mot de passe', max_length=128, default=None)
@@ -64,7 +64,7 @@ class Owner(AbstractBaseUser):
 # Cette méthode retourne une représentation sous forme de chaîne de l'objet Owner. 
 # Dans ce cas, c'est l'adresse e-mail du propriétaire dans django admin
     def __str__(self):
-       return self.last_name
+        return self.last_name
 #fonctionne
 
 
@@ -75,22 +75,22 @@ class Dog(models.Model):
     name = models.CharField('nom', max_length=50)
     chip_number = models.PositiveBigIntegerField()
     pic_profile = models.ImageField(
-       upload_to="images/",
-       max_length=255,
-       blank=False,
-       null=False,
-       width_field="image_width",
-       height_field="image_height",
-       help_text="Téléchargez une image de profil (format JPEG ou PNG).",
-       verbose_name="Photo de profil",
+        upload_to="images/",
+        max_length=255,
+        blank=False,
+        null=False,
+        width_field="image_width",
+        height_field="image_height",
+        help_text="Téléchargez une image de profil (format JPEG ou PNG).",
+        verbose_name="Photo de profil",
     ),
     # Je crée une sous classe de genre pour le chien
     class Gender(models.TextChoices):
-       MALE = 'M', 'Male'
-       FEMALE = 'F', 'Female'
-       OTHER = 'O', 'Other'
+        MALE = 'M', 'Male'
+        FEMALE = 'F', 'Female'
+        OTHER = 'O', 'Other'
     gender = models.CharField(
-       max_length=1,
-       choices=Gender.choices,
-       default=Gender.OTHER,
+        max_length=1,
+        choices=Gender.choices,
+        default=Gender.OTHER,
     )
