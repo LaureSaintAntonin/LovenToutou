@@ -28,15 +28,25 @@ def register(request):
 
     return render(request, 'loventoutou/register.html', {'form': form}) #fonctionne - bdd bien implémentée -
 
-# la bdd. Fichier Bdd qui note une modification dans VSC. Mais infor restent sur le formulaire.
+# la bdd. Fichier Bdd qui note une modification dans VSC. Mais infos restent sur le formulaire.
 # A Corriger.
 
 def profil(request):
-    # Récupérer toutes les entrée de l'object Owner -> Ne fonctionne pas encore
-    Owners = Owner.objects.all()
+    # Récupérer l'utilisateur connecté
+    user = request.user
+    
+    #vérifier si utilisateur est connecté
+    if user.is_authenticated:
+        #filtrer les données de Owner pour l'utilisateur connecté
+        owners = Owner.objects.filter(mail_owner=user.email, password=user.password)
     
     # Passerl les objects récupérés au template pour l'affichage
-    return render(request, "loventoutou/user.html", {'owner': Owner})
+        return render(request, "loventoutou/user.html", {'owners': owners})
+    else:
+        #redirigez l'utilisateur vers la page de connexion s'il  n'est pas connecté
+        return redirect('/connexion')
+    
+
 
 def navigation(request):
     return render(request, "loventoutou/navigation.html")
