@@ -7,14 +7,13 @@ app_name = "loventoutou"
 urlpatterns = [
 	path("", views.index, name="index"), 
 	path("connexion/", views.connexion, name="connexion"),
-	path("connexion/profil/<int:id>/", views.profil, name="profil"),
-	# path("connexion/index/", views.index, name=""),
+	path("connexion/profil/", views.profil, name="profil"),
 
 	path("register/", views.register, name="register"),
-	# path("register/profil/", views.profil, name="profil"),
-	# path("register/index/", views.index, name=""),
+
 
 	path("profil/", views.profil, name="profil"),
+	path('edit_profile/', views.edit_profile, name='edit_profile'),
 	path("navigation/", views.navigation, name="navigation"),
 ]
 

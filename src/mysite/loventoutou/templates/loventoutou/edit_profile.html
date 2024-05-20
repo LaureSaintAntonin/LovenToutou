@@ -32,23 +32,11 @@
 				Vous pouvez aussi supprimer votre compte
 			</p>
 
-			<div class="content_bdd">
-				<h2>Informations du profil :</h2>
-				<ul>
-					<li>
-						<strong>Prénom :</strong> {{ owner.first_name }}<br />
-						<strong>Nom :</strong> {{ owner.last_name }}<br />
-						<strong>Elevage :</strong> {{ owner.breeding_name }}<br />
-						<strong>Numéro de Siret :</strong> {{ owner.siret_number }}<br />
-						<strong>Adresse :</strong> {{ owner.complete_adress }}<br />
-						<strong>Numéro de Téléphone:</strong> {{ owner.phone_number }}<br />
-						<strong>Adresse Mail :</strong> {{ owner.mail_owner }}<br />
-						<strong>Mot de passe :</strong> {{ owner.password }}<br />
-						<!-- Ajoutez d'autres attributs de Owner selon votre modèle -->
-					</li>
-				</ul>
-			</div>
-			<a href="{% url 'edit_profile' %}">Modifier le profil</a>
+			<!-- edit_profile.html -->
+			<form method="post">
+				{% csrf_token %} {{ form.as_table }}
+				<button type="submit">Enregistrer les modifications</button>
+			</form>
 		</main>
 		<footer>
 			<p class="p5">mentions légales :</p>

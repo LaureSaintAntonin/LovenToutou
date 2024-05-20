@@ -144,4 +144,4 @@ IMAGES_ROOT = [
     BASE_DIR, "images/"
 ]
 
-# AUTH_USER_MODEL = 'loventoutou.Owner'
+AUTH_USER_MODEL = 'loventoutou.Owner'
