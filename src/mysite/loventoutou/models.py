@@ -4,6 +4,7 @@ from django.core.validators import RegexValidator, EmailValidator
 
 
 class OwnerManager(BaseUserManager):
+    # Mon gestionnaire d'utilisateurs
     def create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError('L\'adresse e-mail est obligatoire.')
@@ -16,11 +17,12 @@ class OwnerManager(BaseUserManager):
 # Lorsque l'on rajoute un champ à un modèle déjà migré, 
 # tjs mettre une valeur par défaut (ex:default=None) sinon migration impossible
 class Owner(AbstractBaseUser):
+    # id_user = models.IntegerField(null=True) <-- Django gère automatiquement la clé primaire.
     first_name = models.CharField('prénom', max_length=50)
     last_name = models.CharField('nom', max_length=50)
-    breeding_name = models.CharField('elevage', max_length=70, default=None)
-    siret_number = models.PositiveBigIntegerField('numéro de siret')
-    complete_address = models.CharField('adresse', max_length=250)
+    breeding_name = models.CharField('elevage', max_length=70, default=None, blank=False, null=False)
+    siret_number = models.PositiveBigIntegerField('numéro de siret', default=None, blank=False, null=False)
+    complete_address = models.CharField('adresse', max_length=250, blank=False)
     # Utilisez un champ CharField pour le numéro de téléphone
     phone_regex = RegexValidator(
         regex=r'^\d{10}$',  # Exemple : 1234567890 (10 chiffres)
@@ -74,8 +76,9 @@ class Dog(models.Model):
     owner_dog = models.ForeignKey('Owner', on_delete=models.CASCADE, default=None)
     name = models.CharField('nom', max_length=50)
     chip_number = models.PositiveBigIntegerField()
+    bio = models.TextField(blank=True)
     pic_profile = models.ImageField(
-        upload_to="images/",
+        upload_to="images/", #default = 'shield-dog-solid.svg'  <-- photo par défault, mais migration bdd à prévoir
         max_length=255,
         blank=False,
         null=False,

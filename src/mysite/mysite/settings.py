@@ -136,4 +136,12 @@ STATICFILES_DIR = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+
+#paramétrage des urls et des chemins pour le dossier images.
+IMAGES_URL = "/images/"
+
+IMAGES_ROOT = [
+    BASE_DIR, "images/"
+]
+
 # AUTH_USER_MODEL = 'loventoutou.Owner'

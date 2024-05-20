@@ -22,7 +22,7 @@ def register(request):
         form = OwnerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/profil') # fonctionne -> page profil qui apparait bien
+            return redirect('/profil') 
     else:
         form = OwnerForm()
 
@@ -31,17 +31,17 @@ def register(request):
 # la bdd. Fichier Bdd qui note une modification dans VSC. Mais infos restent sur le formulaire.
 # A Corriger.
 
-def profil(request):
+def profil(request,id):
     # Récupérer l'utilisateur connecté
     user = request.user
     
     #vérifier si utilisateur est connecté
     if user.is_authenticated:
         #filtrer les données de Owner pour l'utilisateur connecté
-        owners = Owner.objects.filter(mail_owner=user.email, password=user.password)
+        user = Owner.objects.filter(mail_owner=user.email, password=user.password)
     
     # Passerl les objects récupérés au template pour l'affichage
-        return render(request, "loventoutou/user.html", {'owners': owners})
+        return render(request, "loventoutou/user.html", {'id': id})
     else:
         #redirigez l'utilisateur vers la page de connexion s'il  n'est pas connecté
         return redirect('/connexion')
