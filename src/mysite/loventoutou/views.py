@@ -1,27 +1,50 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
-from loventoutou.forms import ConnectForm, OwnerForm
+from loventoutou.forms import LoginForm, OwnerForm
 from loventoutou.models import Owner
+from . import forms
 
 
 def index(request): 
     return render(request, "loventoutou/index.html") #fonctionne
 
-def connexion(request):
-    if request.method == "POST":
-        form = ConnectForm(request.POST)
+
+def  login_page(request):
+    form = forms.LoginForm()
+    message = ''
+    if request.method == 'POST':
+        form = forms.LoginForm(request.POST)
         if form.is_valid():
-            mail = form.cleaned_data['mail']
-            password = form.cleaned_data['password']
-            user = authenticate(request, mail_owner=mail, password=password)
+            user = authenticate(
+                mail=form.cleaned_data['Email'],
+                password=form.cleaned_data['Password']
+            )
             if user is not None:
                 login(request, user)
-                return redirect('profil')  # Rediriger vers la vue du profil
-    else:
-        form = ConnectForm()
-        
-    return render(request, "loventoutou/connexion.html", {"form": form})
+                message = f'Bonjour, {user.first_name}! Vous êtes connecté.'
+            else:
+                message = 'Identifiants invalides.'
+    return render(request, 'loventoutou/connexion.html', context={'form': form, 'message':message})
+
+
+
+# def connexion(request):
+#     form = forms.ConnectForm()
+#     message = ''
+#     if request.method == "POST":
+#         form = forms.ConnectForm(request.POST)
+#         if form.is_valid():
+#             user = authenticate (
+#             mail = form.cleaned_data['mail'],
+#             password = form.cleaned_data['password'],
+#             )
+#             if user is not None:
+#                 login(request, user)
+#                 message = f'Bonjour {user.username} ! Vous êtes connecté.'
+#             else:
+#                 message = 'identifiants invalides'
+#         return render(request, "loventoutou/connexion.html", context={"form": form})
 
 
 

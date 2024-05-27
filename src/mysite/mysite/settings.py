@@ -57,7 +57,8 @@ ROOT_URLCONF = "mysite.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            BASE_DIR.joinpath('tempates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -141,7 +142,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 IMAGES_URL = "/images/"
 
 IMAGES_ROOT = [
-    BASE_DIR, "images/"
+    BASE_DIR / "images/"
 ]
 
 AUTH_USER_MODEL = 'loventoutou.Owner'

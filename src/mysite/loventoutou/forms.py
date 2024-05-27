@@ -11,7 +11,7 @@ class OwnerForm(ModelForm):
         #possible de faire aussi un exclude = ["is_active", "is_staff"] - mais peu utilisé 
         #--> fonctionne
         
-class ConnectForm(forms.Form):
+class LoginForm(forms.Form):
     mail = forms.EmailField(label="Email")
     password = forms.CharField(label="Mot de passe", widget=forms.PasswordInput)
 

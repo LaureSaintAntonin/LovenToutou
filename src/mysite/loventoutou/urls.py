@@ -6,14 +6,14 @@ from . import views
 app_name = "loventoutou"
 urlpatterns = [
 	path("", views.index, name="index"), 
-	path("connexion/", views.connexion, name="connexion"),
-	path("connexion/profil/", views.profil, name="profil"),
+	path("connexion/", views.login_page, name="connexion"),
+	# path("connexion/profil/", views.profil, name="profil"),
 
 	path("register/", views.register, name="register"),
 
 
 	path("profil/", views.profil, name="profil"),
-	path('edit_profile/', views.edit_profile, name='edit_profile'),
+	# path('edit_profile/', views.edit_profile, name='edit_profile'),
 	path("navigation/", views.navigation, name="navigation"),
 ]
 
