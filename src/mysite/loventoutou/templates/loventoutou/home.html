@@ -21,6 +21,7 @@
 			<h1><strong>Bienvenue sur LovenToutou</strong></h1>
 			<nav class="topnav">
 				<a onclick="window.location.href = '/';">Accueil</a>
+				<a href="{% url 'logout' %}">Se déconnecter</a>
 			</nav>
 		</header>
 		<main>
@@ -35,7 +36,10 @@
 
 			<!-- edit_profile.html -->
 			<form method="post">
-				{% csrf_token %} {{ form.as_table }}
+				{% csrf_token %}
+				<table>
+					{{ form.as_table }}
+				</table>
 				<button type="submit">Enregistrer les modifications</button>
 			</form>
 		</main>

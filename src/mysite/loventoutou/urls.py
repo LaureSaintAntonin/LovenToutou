@@ -1,4 +1,5 @@
 from django.urls import path
+from django.contrib.auth import views
 from . import views
 
 # La fonction path() reçoit quatre paramètres,
@@ -8,12 +9,11 @@ urlpatterns = [
 	path("", views.index, name="index"), 
 	path("login_page/", views.login_page, name="login_page"),
 	path("logout/", views.logout_user, name='logout'),
-	path("login_page/home/", views.home, name="home"),
-
 	path("register/", views.register, name="register"),
-
 	path("home/", views.home, name="home"),
-	# path('edit_profile/', views.edit_profile, name='edit_profile'),
+	
+
+
 	path("navigation/", views.navigation, name="navigation"),
 ]
 
