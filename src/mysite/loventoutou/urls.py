@@ -6,13 +6,13 @@ from . import views
 app_name = "loventoutou"
 urlpatterns = [
 	path("", views.index, name="index"), 
-	path("connexion/", views.login_page, name="connexion"),
-	# path("connexion/profil/", views.profil, name="profil"),
+	path("login_page/", views.login_page, name="login_page"),
+	path("logout/", views.logout_user, name='logout'),
+	path("login_page/home/", views.home, name="home"),
 
 	path("register/", views.register, name="register"),
 
-
-	path("profil/", views.profil, name="profil"),
+	path("home/", views.home, name="home"),
 	# path('edit_profile/', views.edit_profile, name='edit_profile'),
 	path("navigation/", views.navigation, name="navigation"),
 ]

@@ -58,7 +58,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            BASE_DIR.joinpath('tempates')],
+            BASE_DIR.joinpath('tempates')
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -125,6 +126,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# LOGIN_URL : 'login_page'
+
 STATIC_URL = "static/"
 
 STATICFILES_DIR = [
@@ -132,17 +135,20 @@ STATICFILES_DIR = [
     BASE_DIR /"static/"
 ]
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
 #paramétrage des urls et des chemins pour le dossier images.
 IMAGES_URL = "/images/"
 
 IMAGES_ROOT = [
     BASE_DIR / "images/"
 ]
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'loventoutou.Owner'
+
+# AUTHENTICATION_BACKENDS = (
+#     'loventoutou.backends.EmailBackend',
+#     'django.contrib.auth.backends.ModelBackend',
+# )

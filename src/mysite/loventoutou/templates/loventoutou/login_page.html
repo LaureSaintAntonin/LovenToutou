@@ -27,11 +27,11 @@
     <body>
     <div class="content">
         <div class="Connectez-vous">
-            <form method="post">
+            <form method="post"> 
                 <h2>Connectez vous</h2>
                 {% csrf_token %}
                 <table>
-                {{ forms.as_table }}
+                {{ form.as_table }}
                 </table>
                 <button class="button-primary" type="submit">Connectez-vous</button>
             </form>

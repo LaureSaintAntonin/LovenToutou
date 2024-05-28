@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from loventoutou.models import Owner
 
-#créer le formulaire 
+#créer le formulaire d'enregistrement des informations complète du propriétaire
 class OwnerForm(ModelForm):
     class Meta:
         model = Owner
@@ -11,6 +11,8 @@ class OwnerForm(ModelForm):
         #possible de faire aussi un exclude = ["is_active", "is_staff"] - mais peu utilisé 
         #--> fonctionne
         
+
+#Créer le formulaire de connexion
 class LoginForm(forms.Form):
     mail = forms.EmailField(label="Email")
     password = forms.CharField(label="Mot de passe", widget=forms.PasswordInput)
