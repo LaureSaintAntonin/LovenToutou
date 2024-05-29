@@ -36,13 +36,15 @@ def register(request):
     if request.method == 'POST':
         form = OwnerForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('home')
+            user = form.save()
+            user = authenticate(mail=user.mail_owner, password=form.cleaned_data['password'])
+            if user is not None:
+                login(request, user)
+                return redirect('home')
     else:
         form = OwnerForm()
     return render(request, 'loventoutou/register.html',{'form': form}) #fonctionne - bdd bien implémentée -
-# la bdd. Fichier Bdd qui note une modification dans VSC. Mais infos restent sur le formulaire.
-# A Corriger.
+# la bdd. Fichier Bdd qui note une modification dans VSC.
 
 #Le décorateur @login_required -> seuls les utilisateurs connectés peuvent accéder à cette vue.
 @login_required
@@ -51,8 +53,7 @@ def home(request):
     if not user.is_authenticated:
         print("utilisateur non authentifié")
     else:
-        # print(f'utilisateur authentifié: {user.mail}')
-        print(f"Utilisateur authentifié: {user.mail}")
+        print(f"Utilisateur authentifié: {user.email}")
         
     if request.method =='POST':
         print('requete POST reçue')
@@ -60,13 +61,14 @@ def home(request):
         if form.is_valid():
             print('formulaire validé')
             form.save()
-            return redirect('loventoutou:home')
+            return redirect('home')
         else:
             print('formulaire invalidé')
     else:
         print('requete GET reçue')
         form = OwnerForm(instance=user)
     return render(request, 'loventoutou/home.html', {'form': form})
+
 
 def navigation(request):
     return render(request, "loventoutou/navigation.html")
