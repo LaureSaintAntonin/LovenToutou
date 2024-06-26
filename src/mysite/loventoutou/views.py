@@ -41,7 +41,7 @@ def login_page(request):
                 message = 'Identifiants invalides.'
         else:
             print("Form is not valid")  # Indique que le formulaire n'est pas valide
-            message = 'Identifiants invalides.'
+            message = 'formulaire non valide.'
     else:
         print("GET request")  # Indique que la méthode de la requête est GET
         form = LoginForm()
@@ -72,7 +72,7 @@ def home(request):
     if not user.is_authenticated:
         print("utilisateur non authentifié")
     else:
-        print(f"Utilisateur authentifié: {user.email}")
+        print(f"Utilisateur authentifié: {user.mail_owner}")
         
     if request.method =='POST':
         print('requete POST reçue')
