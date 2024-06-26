@@ -152,7 +152,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = 'loventoutou.Owner'
 
 AUTHENTICATION_BACKENDS = (
-    'loventoutou.backends.EmailBackend',
+    # 'loventoutou.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
-    'path.to.EmailBackend',
+#     'path.to.EmailBackend',
 )
