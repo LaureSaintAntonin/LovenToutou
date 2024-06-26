@@ -19,12 +19,12 @@ def login_page(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             user = authenticate(
-                mail=form.cleaned_data['mail'],
+                mail_owner=form.cleaned_data['mail_owner'],
                 password=form.cleaned_data['password']
             )
             if user is not None:
                 login(request, user)
-                return redirect('loventoutou:home')
+                return redirect('home')
         else:
             message = 'Identifiants invalides.'
     else:

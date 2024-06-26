@@ -14,11 +14,11 @@ class OwnerForm(ModelForm):
 
 #Créer le formulaire de connexion
 class LoginForm(forms.Form):
-    mail = forms.EmailField(label="Email")
+    mail_owner = forms.EmailField(label="Email")
     password = forms.CharField(label="Mot de passe", widget=forms.PasswordInput)
 
     def clean_mail(self):
-        mail = self.cleaned_data.get('mail')
+        mail= self.cleaned_data.get('Email')
         if not Owner.objects.filter(mail_owner=mail).exists():
             raise forms.ValidationError("L'email n'existe pas dans la base de donnée")
         return mail

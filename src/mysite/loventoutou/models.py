@@ -41,7 +41,7 @@ class Owner(AbstractBaseUser):
         default=None,
         unique=True
     )
-# Champ de mot de passe haché
+# Champ de mot de passe
     password = models.CharField('mot de passe', max_length=128, default=None)
 
 # Permissions 
