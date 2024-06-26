@@ -66,6 +66,7 @@ def register(request):
 # la bdd. Fichier Bdd qui note une modification dans VSC.
 
 #Le décorateur @login_required -> seuls les utilisateurs connectés peuvent accéder à cette vue.
+@login_required
 def home(request):
     user = request.user
     if not user.is_authenticated:
