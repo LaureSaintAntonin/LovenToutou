@@ -154,4 +154,5 @@ AUTH_USER_MODEL = 'loventoutou.Owner'
 AUTHENTICATION_BACKENDS = (
     'loventoutou.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
+    'path.to.EmailBackend',
 )
