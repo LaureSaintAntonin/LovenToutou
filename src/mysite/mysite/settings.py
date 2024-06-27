@@ -127,8 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-LOGIN_URL = "/login_page/"
-LOGIN_REDICRECT_URL = "/home/"
+# LOGIN_URL = "/login_page/"
+# LOGIN_REDICRECT_URL = "/home/"
 
 
 STATIC_URL = "static/"
@@ -152,7 +152,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = 'loventoutou.Owner'
 
 AUTHENTICATION_BACKENDS = (
-    # 'loventoutou.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
-#     'path.to.EmailBackend',
 )

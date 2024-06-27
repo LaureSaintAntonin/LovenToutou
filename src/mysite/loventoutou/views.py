@@ -20,7 +20,7 @@ def print_auth_backends():
         print(backend)
 
 def login_page(request):
-    print_auth_backends
+    print_auth_backends()
     print("login_page called")  # Indique que la vue a été appelée
     if request.method == 'POST':
         print("POST request")  # Indique que la méthode de la requête est POST
@@ -30,7 +30,6 @@ def login_page(request):
             mail_owner = form.cleaned_data['mail_owner']
             password = form.cleaned_data['password']
             print(f"mail_owner: {mail_owner}, password: {password}")  # Affiche les données du formulaire
-
             user = authenticate(mail_owner=mail_owner, password=password) 
             if user is not None:
                 print("User authenticated")  # Indique que l'utilisateur a été authentifié

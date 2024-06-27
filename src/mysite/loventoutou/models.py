@@ -55,7 +55,7 @@ class Owner(AbstractBaseUser):
 # l'authentification. Dans ce cas, c'est l'adresse e-mail (mail_owner).
     USERNAME_FIELD = 'mail_owner'
 #  liste des champs qui sont requis lors de la création d'un utilisateur.
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'breeding_name', 'siret_number', 'complete_address ', 'phone_number']
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'breeding_name', 'siret_number', 'complete_address', 'phone_number']
 
 # Cette méthode est appelée chaque fois que l'objet est enregistré. 
 # Vous pouvez y ajouter des logiques personnalisées, comme le hachage du mot de passe avant la sauvegarde.
